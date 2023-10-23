@@ -1,0 +1,331 @@
+body {
+  font-family: 'Chakra Petch', sans-serif;
+  color: #ffffff;
+  font-size: 15px;
+  background-color: rgba(0, 0, 0, 0);
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+.container {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.0), rgba(30, 16, 49, 0.500));
+  overflow: hidden;
+}
+
+.shop {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: 37vw;
+  width: 60vw;
+  background: linear-gradient(to top, rgba(30, 16, 46) 0%, rgb(17, 10, 27) 100%);
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.items-container {
+  position: absolute;
+  top: 4.0vw;
+  left: 0.8vw;
+  width: 35vw;
+  height: 30vw;
+  display: grid;
+  grid-template-columns: 24% 24% 24% 24%;
+  grid-template-rows: auto;
+  grid-gap: 0.2vw 0.2vw;
+  align-content: start;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0);
+  overflow-y: scroll;
+}
+
+.item-box {
+  height: 6vw;
+  width: 6vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(64, 29, 117, 0.85) 0%, rgba(64, 29, 117, 0.4) 100%);
+  border-radius: 0.3vw;
+  padding: 0.8vw;
+  margin-bottom: 0.6vw;
+  margin-right: 0.3vw;
+  cursor: pointer;
+  transition:all 0.3s;
+}
+
+.item-box:hover {
+  background-color: rgba(43, 21, 78, 0.75);
+}
+
+.item-box:active {
+  background-color: rgba(60, 30, 109, 0.85);
+}
+
+.item-image {
+  height: 3.1vw;
+  width: 3.1vw;
+  object-fit: contain;
+  margin-top: 0.1vw;
+  margin-bottom: 0.1vw;
+}
+
+.item-name {
+  color: rgb(255, 255, 255);
+  font-size: 0.8vw;
+  padding-top: 0.6vw;
+}
+
+.item-price {
+  color: rgb(216, 216, 216);
+  font-size: 0.6vw;
+  padding-top: 0.3vw;
+}
+
+
+
+.cart-container {
+  position: absolute;
+  right: 2.5vw;
+  top: 4.0vw;
+  height: 26vw;
+  width: 22vw;
+  border-radius: 0.3vw;
+  padding-top: 0.4vw;
+  background: radial-gradient(circle at center, rgb(43, 21, 78, 0.300), rgba(44, 17, 88, 0.300));
+	flex-direction:row;
+	flex-wrap: wrap;
+  overflow-x: scroll;
+}
+
+.cart-items {
+  position: absolute;
+  padding-top: 3.5vw;
+  width: 35vw;
+  height: 30vw;
+}
+
+.cart-item {
+  position: relative;
+  left: 50%;
+  transform: translate(-50%, 10%);
+  margin-bottom: 0.4vw;
+  display: flex;
+  align-items: center;
+  height: 4vw;
+  width: 20vw;
+  background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(64, 29, 117, 0.85) 0%, rgba(64, 29, 117, 0.4) 100%);
+  border-radius: 0.3vw;
+}
+
+.cart-item img {
+  width: 2vw;
+  height: 2vw;
+  background-color: rgba(255, 255, 255, 0.0);
+  border-radius: 0.2vw;
+  object-fit: contain;
+  margin-left: 0.8vw;
+  margin-right: 0.5vw;
+  padding: 0.2vw;
+}
+
+.cart-item-name {
+  color: rgb(255, 255, 255);
+  font-size: 0.80vw;
+}
+
+.cart-item-controls {
+  position: absolute;
+  right: 0.3vw;
+  display: flex;
+  align-items: center;
+  margin-right: 1vw;
+}
+
+.cart-item-btn {
+  color: rgb(226, 226, 226);
+  background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(64, 29, 117, 0.85) 0%, rgba(64, 29, 117, 0.4) 100%);
+  font-weight: 500;
+  height: 1.3vw;
+  width: 1.3vw;
+  border: none;
+  border-radius: 0.3vw;
+  user-select: none;
+  transition:all 0.3s;
+}
+
+.cart-item-btn:hover {
+  background-color: rgba(255, 255, 255, 0.450);
+}
+
+.cart-item-btn:active {
+  background-color: rgba(255, 255, 255, 0.500);
+}
+
+.quantity {
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1.6vw;
+  font-size: 0.85vw;
+}
+
+
+.cart-item-delete {
+  fill: rgb(255, 255, 255, 0.200);
+  filter: drop-shadow(0vw 0vw 0.3vw rgba(255, 255, 255, 0.8));
+  width: auto;
+  height: 1.3vw;
+  border: none;
+  border-radius: 3px;
+  margin-left: 0.8vw;
+  user-select: none;
+  transition:all 0.3s;
+}
+
+.cart-item-delete:hover {
+  fill: rgb(110, 75, 192);
+  filter: drop-shadow(0vw 0vw 0.3vw rgba(110, 75, 192, 0.8));
+  width: auto;
+  height: 1.3vw;
+  border: none;
+  border-radius: 3px;
+  margin-left: 0.8vw;
+  user-select: none;
+  transition:all 0.3s;
+}
+
+
+
+.total-price-span {
+  position: absolute;
+  left: 5%;
+  top: 50%;
+  transform: translate(0%, -50%);
+  color: #ffffff;
+  font-size: 18px;
+}
+
+
+.button-container {
+  position: absolute;
+  right: 2.5vw;
+  bottom: 2.5vw;
+  height: 3.2vw;
+  width: 22vw;
+  background: radial-gradient(circle at center, rgb(43, 21, 78, 0.300), rgba(44, 17, 88, 0.300));
+  border-radius: 0.3vw;
+}
+
+.buttons-container {
+  position: absolute;
+  right: 3%;
+  top: 50%;
+  transform: translate(0%, -50%);
+}
+
+.pay-btn {
+  background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(64, 29, 117, 0.85) 0%, rgba(64, 29, 117, 0.4) 100%);
+  height: 1.85vw;
+  width: 5.5vw;
+  border: none;
+  border-radius: 5px;
+  color: rgba(255, 255, 255, 0.700);
+  cursor: pointer;
+  font-size: 0.7vw;
+  margin-right: 0.6vw;
+  transition:all 0.3s;
+}
+
+
+.icon {
+  width: 0.9vw;
+  height: 0.9vw;
+}
+
+.pay-btn:hover {
+  color: rgba(255, 255, 255);
+  background-color: rgba(64, 29, 117, 0.50) !important;
+}
+
+
+.logo-container {
+  position: absolute;
+  top: 1vw;
+  left: 1.5vw;
+  display: flex;
+  align-items: center;
+}
+
+#LOGO {
+  width: auto;
+  height: 1.7vw;
+  fill: rgb(110, 75, 192);
+  filter: drop-shadow(0px 0px 3px rgba(110, 75, 192, 0.800));
+}
+
+.logo-span {
+  font-size: 0.8vw;
+  margin-left: 0.3vw; /* Adjust the margin as needed */
+  font-weight: 1000;
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-1 {
+  color: rgb(132, 102, 226); /* You can adjust the shade of blue as needed */
+}
+
+.logo-2 {
+  color: #ffffff;
+}
+
+
+
+.close-button-container {
+  position: absolute;
+  top: 1vw;
+  right: 1.5vw;
+}
+
+.close-btn {
+  background: radial-gradient(circle at center, #ff0000, #791313);
+  height: 2vw;
+  width: 2vw;
+  border: none;
+  border-radius: 4px;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 0.9vw;
+  transition: all 0.3s;
+}
+
+.close-btn:hover {
+
+}
+
+
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb:active {
+  display: none;
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
